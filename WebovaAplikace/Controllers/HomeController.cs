@@ -18,7 +18,7 @@ namespace WebovaAplikace.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Create()
         {
             return View();
         }
