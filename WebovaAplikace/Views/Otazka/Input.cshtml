@@ -1,0 +1,68 @@
+﻿
+<h3>Na této stránce zadáte vaše hodnoty </h3>
+<hr />
+@model Kuryr
+
+
+<div class="row">
+
+	<div class="col-6">
+
+		<div class="card">
+
+
+
+			<div class="card-header">
+				<h5>Zadejte hodnoty</h5>
+			</div>
+
+			<div class="card-body">
+				<form asp-controller="Otazka" asp-action="V" method="post">
+					<div class="mb-3">
+						<label class="form-label">Jmeno</label>
+						<input asp-for="jmeno" type="text" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Trzba</label>
+						<input asp-for="trzba" type="number" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Dyska</label>
+						<input asp-for="dyska" type="number" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Penezenka</label>
+						<input asp-for="penezenka" type="number" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Tankovani</label>
+						<input asp-for="tankovani" type="number" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Nakupovani</label>
+						<input asp-for="nakupovani" type="number" class="form-control" />
+					</div>
+
+					<div class="mb-3">
+						<button type="submit" class="btn btn-primary">Odeslat</button>
+					</div>
+
+				</form>
+			</div>
+
+			<div class="card-footer"></div>
+		</div>
+
+
+
+
+
+
+	</div>
+
+</div>

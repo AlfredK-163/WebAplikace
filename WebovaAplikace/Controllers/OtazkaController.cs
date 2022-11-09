@@ -6,16 +6,25 @@ namespace WebovaAplikace.Controllers
 {
     public class OtazkaController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(Kuryr kuryr)
         {
-            DogviewModel doggo = new DogviewModel() { Name = "Sif", age = 2 };
-            return View(doggo);
+            kuryr.celkem = (kuryr.penezenka + kuryr.dyska - kuryr.tankovani - kuryr.nakupovani - kuryr.trzba); 
+            Kuryr kuryr2 = new Kuryr();
+            return View();
         }
 
-        public string Otazka()
+        public IActionResult Input()
         {
-            return "Zadejte hodnotu penezenky";
+            var kuryr1 = new Kuryr();
+            return View(kuryr1);
         }
 
+        public IActionResult VytvoritKuryra(Kuryr kuryr)
+        {
+            kuryr.celkem = (kuryr.penezenka + kuryr.dyska - kuryr.tankovani - kuryr.nakupovani - kuryr.trzba);
+
+            return View("Index");
+
+        }
     }
 }
